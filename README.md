@@ -59,8 +59,10 @@ dotnet run
 ```
 
 The API will start and listen on:
-- HTTP: `http://localhost:5000`
-- HTTPS: `https://localhost:5001` (with development certificate)
+- HTTP: `http://localhost:5037`
+- HTTPS: `https://localhost:7071` (with development certificate)
+
+*Note: You can override these ports using the `--urls` parameter with dotnet run.*
 
 #### Using Visual Studio
 
@@ -78,7 +80,7 @@ Returns a 5-day weather forecast.
 
 **Example:**
 ```bash
-curl http://localhost:5000/api/WeatherForecast
+curl http://localhost:5037/api/WeatherForecast
 ```
 
 **Response:**
@@ -100,7 +102,7 @@ Returns the weather forecast for a specific day (1-30 days from now).
 
 **Example:**
 ```bash
-curl http://localhost:5000/api/WeatherForecast/3
+curl http://localhost:5037/api/WeatherForecast/3
 ```
 
 **Response:**
@@ -119,7 +121,7 @@ Creates a new weather forecast entry.
 
 **Example:**
 ```bash
-curl -X POST http://localhost:5000/api/WeatherForecast \
+curl -X POST http://localhost:5037/api/WeatherForecast \
   -H "Content-Type: application/json" \
   -d '{"date":"2026-02-01","temperatureC":20,"summary":"Mild"}'
 ```
@@ -138,7 +140,7 @@ curl -X POST http://localhost:5000/api/WeatherForecast \
 
 When running in Development mode, the API includes Swagger UI for interactive API documentation and testing.
 
-Access Swagger UI at: `http://localhost:5000/swagger`
+Access Swagger UI at: `http://localhost:5037/swagger`
 
 The Swagger interface allows you to:
 - View all available endpoints
