@@ -198,7 +198,7 @@ You can test the API using:
 
 ### Port Already in Use
 
-If port 5000 or 5001 is already in use, you can specify different ports:
+If port 5037 or 7071 is already in use, you can specify different ports:
 
 ```bash
 dotnet run --urls="http://localhost:5100"
